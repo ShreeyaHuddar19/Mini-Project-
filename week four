@@ -1,0 +1,21 @@
+#include <stdio.h>  
+void main()
+{
+int N, sum=0; 
+scanf("%d", &N); /* The value of N is taken from the test cases */
+
+/* Complete the program. Please use the printf statement given below to 
+exactly match your output with the test cases.
+
+printf("Sum = %d", sum);
+
+*/
+int i = 2;
+while(i <= N)
+    {
+        sum = sum + i;
+        i = i + 2;
+    }
+
+    printf("Sum = %d", sum);
+}
