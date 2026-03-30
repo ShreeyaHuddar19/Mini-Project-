@@ -1,0 +1,128 @@
+WAVE OPTICS QUIZ PROGRAM (C LANGUAGE)
+Pranvikant Mishra(Pointers & Recursion)
+Shreeya Huddar(Quiz preperation)
+Eshaan Toke(Quiz preperation)
+Swara Lande(Print Statement)
+1. Introduction
+
+This project is a console-based quiz application developed in the C programming language. The program is designed to test a user’s knowledge of Wave Optics, covering topics such as interference, diffraction, and polarization.
+
+The quiz consists of 25 multiple-choice questions, each having four options. The user selects an answer, and the program evaluates the response, provides feedback, and calculates the final score.
+
+2. Objectives
+To develop a basic quiz system using C.
+To strengthen concepts of structures and arrays.
+To implement input validation in user interaction.
+To evaluate user performance with scoring and feedback.
+3. Features of the Program
+25 pre-defined questions from Wave Optics.
+Multiple-choice format (4 options per question).
+Input validation for:
+Non-numeric inputs
+Out-of-range inputs (only 1–4 allowed)
+Immediate feedback (Correct/Wrong).
+Final score and percentage calculation.
+Performance evaluation:
+Excellent
+Good
+Needs improvement
+4. Tools & Technologies Used
+Programming Language: C
+Compiler: GCC / Turbo C / Code::Blocks / VS Code
+Platform: Console (Command Line Interface)
+5. Program Structure
+5.1 Structure Definition
+struct Question {
+    char question[300];
+    char options[4][150];
+    int correct;
+};
+
+This structure stores:
+
+The question text
+Four answer options
+The correct answer index
+5.2 Global Array
+struct Question q[TOTAL];
+Stores all 25 questions.
+Acts as a question database.
+5.3 Main Function
+int main() {
+    startQuiz();
+    return 0;
+}
+Entry point of the program.
+Calls the quiz function.
+5.4 Quiz Function
+void startQuiz()
+
+This function:
+
+Displays questions
+Accepts user input
+Validates answers
+Calculates score
+6. Input Validation
+6.1 Non-Numeric Input Handling
+if (scanf("%d", &ans) != 1)
+Prevents invalid characters.
+Clears buffer using getchar().
+6.2 Range Validation
+if (ans < 1 || ans > 4)
+Ensures only valid options (1–4) are accepted.
+7. Working of the Program
+Program starts and displays quiz title.
+Each question is shown with 4 options.
+User enters an answer (1–4).
+Program:
+Validates input
+Checks correctness
+Displays result
+Loop continues for all 25 questions.
+Final score and percentage are displayed.
+Performance message is shown.
+8. Scoring System
+Correct Answer → +1 mark
+Wrong Answer → 0 mark
+Performance Criteria
+Score Range	Result
+20–25	Excellent
+12–19	Good
+Below 12	Needs Improvement
+9. Sample Output
+===== WAVE OPTICS QUIZ (25 QUESTIONS) =====
+
+1. Fringe width in YDSE is:
+1) lambda D / d
+2) d / lambda D
+3) lambda d / D
+4) D / lambda d
+
+Enter answer (1-4): 1
+Correct!
+
+...
+
+Final Score: 18/25
+Percentage: 72.00%
+Result: Good understanding, revise numericals.
+10. Advantages
+Simple and easy to understand.
+Demonstrates use of structures and arrays.
+Good practice for beginners in C.
+Interactive learning tool for physics.
+11. Limitations
+Questions are hardcoded (not dynamic).
+No graphical interface.
+No timer functionality.
+No question randomization.
+12. Future Enhancements
+Add file handling to load questions dynamically.
+Implement GUI using libraries.
+Add timer for each question.
+Randomize questions.
+Store high scores.
+13. Conclusion
+
+The Wave Optics Quiz program successfully demonstrates the use of C programming concepts like structures, loops, and input validation. It serves as an effective educational tool for testing knowledge and improving understanding of Wave Optics.
